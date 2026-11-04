@@ -1,0 +1,30 @@
+services:
+  web:
+    image: php:apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - weba-network
+
+  db-server:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: heslo
+      MYSQL_DATABASE: muj_web
+    networks:
+      - weba-network
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db-server
+    networks:
+      - weba-network
+
+networks:
+  weba-network:
+    driver: bridge
