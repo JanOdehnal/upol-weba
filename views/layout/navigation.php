@@ -1,9 +1,8 @@
-
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
     <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
         <li class="nav-item">
-        <a href="index.php?page=dashboard" class="nav-link link-dark <?php echo $_GET['page'] == 'dashboard' ? 'active text-primary fw-bold' : ''; ?>">
+        <a href="dashboard?page=dashboard" class="nav-link link-dark <?php echo $page == 'dashboard' ? 'active text-primary fw-bold' : ''; ?>">
             <span class="icon">
             <i class="bi bi-easel"></i>
             </span>
@@ -11,7 +10,7 @@
         </a>
         </li>
         <li>
-        <a href="index.php?page=items" class="nav-link link-dark <?php echo $_GET['page'] == 'items' ? 'active text-primary fw-bold' : ''; ?>">
+        <a href="index.php?page=items" class="nav-link link-dark <?php echo $page == 'items' ? 'active text-primary fw-bold' : ''; ?>">
             <span class="icon">
             <i class="bi bi-card-list"></i>
             </span>
@@ -19,7 +18,7 @@
         </a>
         </li>
         <li>
-        <a href="index.php?page=others" class="nav-link link-dark <?php echo $_GET['page'] == 'others' ? 'active text-primary fw-bold' : ''; ?>">
+        <a href="index.php?page=others" class="nav-link link-dark <?php echo $page == 'others' ? 'active text-primary fw-bold' : ''; ?>">
             <span class="icon">
             <i class="bi bi-box"></i>
             </span>
@@ -27,7 +26,7 @@
         </a>
         </li>
         <li>
-        <a href="index.php?page=users" class="nav-link link-dark <?php echo $_GET['page'] == 'users' ? 'active text-primary fw-bold' : ''; ?>">
+        <a href="users?page=users" class="nav-link link-dark <?php echo $page == 'users' ? 'active text-primary fw-bold' : ''; ?>">
             <span class="icon">
             <i class="bi bi-person-circle"></i>
             </span>

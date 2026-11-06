@@ -1,6 +1,6 @@
 services:
   web:
-    image: php:apache
+    build: .
     ports:
       - "8080:80"
     volumes:
@@ -12,7 +12,10 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: heslo
-      MYSQL_DATABASE: muj_web
+      MYSQL_DATABASE: my_web
+    volumes:
+      # Levá strana je cesta u vás, pravá strana je speciální složka v kontejneru
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - weba-network
 

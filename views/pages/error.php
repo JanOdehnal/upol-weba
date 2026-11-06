@@ -1,6 +1,6 @@
 <section>
     <div class="container text-center bg-danger text-white p-5 rounded">
-        <h1>Page Not Found</h1>
-        <p>The page you are looking for does not exist.</p>
+        <h1>Error</h1>
+        <p><?php echo $message ?? 'An error occurred.'; ?></p>
     </div>
 </section>

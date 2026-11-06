@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Pokud to, co uživatel hledá, není fyzický soubor (např. obrázek nebo CSS)...
+RewriteCond %{REQUEST_FILENAME} !-f
+# ...a není to ani existující složka...
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# ...tak všechno přesměruj skrytě na index.php
+RewriteRule ^ index.php [QSA,L]
